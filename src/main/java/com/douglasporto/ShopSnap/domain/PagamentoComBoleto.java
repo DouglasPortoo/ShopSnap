@@ -3,13 +3,17 @@ package com.douglasporto.ShopSnap.domain;
 import java.util.Date;
 
 import com.douglasporto.ShopSnap.domain.enums.EstadoPagamento;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Entity;
 
 @Entity
 public class PagamentoComBoleto extends Pagamento {
 
+  @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
   private Date dataVencimento;
+
+  @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
   private Date dataPagamento;
   
   public PagamentoComBoleto() {
