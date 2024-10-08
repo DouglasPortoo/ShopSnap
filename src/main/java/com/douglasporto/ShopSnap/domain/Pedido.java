@@ -2,6 +2,8 @@ package com.douglasporto.ShopSnap.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -10,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
 @Entity
@@ -33,6 +36,9 @@ public class Pedido implements Serializable {
   @JoinColumn(name = "cliente_id")
   private Endereco enderecoDeEntrega;
 
+  @OneToMany(mappedBy = "id.pedido")
+  private Set<ItemPedido> itens = new HashSet<>();
+
   public Pedido() {
   }
 
@@ -42,6 +48,9 @@ public class Pedido implements Serializable {
     this.cliente = cliente;
     this.enderecoDeEntrega = enderecoDeEntrega;
   }
+
+  
+
 
   public Integer getId() {
     return id;
@@ -58,14 +67,6 @@ public class Pedido implements Serializable {
   public void setInstante(Date instante) {
     this.instante = instante;
   }
-
-  // public List<Produto> getItens() {
-  //   return itens;
-  // }
-
-  // public void setItens(List<Produto> itens) {
-  //   this.itens = itens;
-  // }
 
   public Cliente getCliente() {
     return cliente;
@@ -89,6 +90,14 @@ public class Pedido implements Serializable {
 
   public void setEnderecoDeEntrega(Endereco enderecoDeEntrega) {
     this.enderecoDeEntrega = enderecoDeEntrega;
+  }
+
+  public Set<ItemPedido> getItens() {
+    return itens;
+  }
+
+  public void setItens(Set<ItemPedido> itens) {
+    this.itens = itens;
   }
 
   @Override

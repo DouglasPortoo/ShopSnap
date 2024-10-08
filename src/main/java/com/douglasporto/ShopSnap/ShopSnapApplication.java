@@ -13,6 +13,7 @@ import com.douglasporto.ShopSnap.domain.Cidade;
 import com.douglasporto.ShopSnap.domain.Cliente;
 import com.douglasporto.ShopSnap.domain.Endereco;
 import com.douglasporto.ShopSnap.domain.Estado;
+import com.douglasporto.ShopSnap.domain.ItemPedido;
 import com.douglasporto.ShopSnap.domain.Pagamento;
 import com.douglasporto.ShopSnap.domain.PagamentoComBoleto;
 import com.douglasporto.ShopSnap.domain.PagamentoComCartao;
@@ -25,6 +26,7 @@ import com.douglasporto.ShopSnap.repositories.CidadeRepository;
 import com.douglasporto.ShopSnap.repositories.ClienteRepository;
 import com.douglasporto.ShopSnap.repositories.EnderecoRepository;
 import com.douglasporto.ShopSnap.repositories.EstadoRepository;
+import com.douglasporto.ShopSnap.repositories.ItemPedidoRepository;
 import com.douglasporto.ShopSnap.repositories.PagamentoRepository;
 import com.douglasporto.ShopSnap.repositories.PedidoRepository;
 import com.douglasporto.ShopSnap.repositories.ProdutoRepository;
@@ -55,6 +57,9 @@ public class ShopSnapApplication implements CommandLineRunner {
 
 	@Autowired
 	private PagamentoRepository pagamentoRepository;
+
+	@Autowired
+	private ItemPedidoRepository itemPedidoRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ShopSnapApplication.class, args);
@@ -109,6 +114,18 @@ public class ShopSnapApplication implements CommandLineRunner {
 
 		cli1.getPedidos().addAll(Arrays.asList(ped1, ped2));
 
+		ItemPedido ip1 = new ItemPedido(ped1, p1, 0.00, 1, 2000.00);
+		ItemPedido ip2 = new ItemPedido(ped1, p3, 0.00, 2, 80.00);
+		ItemPedido ip3 = new ItemPedido(ped2, p2, 100.00, 1, 800.00);
+
+		ped1.getItens().addAll(Arrays.asList(ip1, ip2));
+		ped2.getItens().addAll(Arrays.asList(ip3));
+
+		p1.getItens().addAll(Arrays.asList(ip1));
+		p3.getItens().addAll(Arrays.asList(ip2));
+		p2.getItens().addAll(Arrays.asList(ip3));
+
+
 		categoriaRepository.saveAll(Arrays.asList(cat1, cat2));
 		produtoRepository.saveAll(Arrays.asList(p1, p2, p3));
 		estadoRepository.saveAll(Arrays.asList(est1, est2));
@@ -120,6 +137,8 @@ public class ShopSnapApplication implements CommandLineRunner {
 		pedidoRepository.saveAll(Arrays.asList(ped1, ped2));
 		pagamentoRepository.saveAll(Arrays.asList(pagto1, pagto2));
 
+		itemPedidoRepository.saveAll(Arrays.asList(ip1, ip2, ip3));
+		
 	}
 
 }
