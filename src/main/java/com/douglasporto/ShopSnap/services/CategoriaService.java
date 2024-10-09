@@ -46,7 +46,14 @@ public class CategoriaService {
   }
 
   public Categoria update(Categoria obj) {
-    find(obj.getId());
+    var categoria = find(obj.getId());
+
+    if (obj.getNome() != null) {
+      categoria.setNome(obj.getNome());
+    }
+
+    obj = categoria;
+
     return repo.save(obj);
   }
 
