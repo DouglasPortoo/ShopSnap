@@ -13,6 +13,7 @@ import com.douglasporto.ShopSnap.services.exceptions.DataIntegrityException;
 import org.springframework.stereotype.Service;
 
 import com.douglasporto.ShopSnap.domain.Categoria;
+import com.douglasporto.ShopSnap.dto.CategoriaDTO;
 import com.douglasporto.ShopSnap.repositories.CategoriaRepository;
 import com.douglasporto.ShopSnap.services.exceptions.ObjectNotFoundException;
 
@@ -56,6 +57,10 @@ public class CategoriaService {
     } catch (DataIntegrityViolationException e) {
       throw new DataIntegrityException("Não é possível excluir uma categoria que possui produtos");
     }
+  }
+
+  public Categoria fromDTO(CategoriaDTO objDTO) {
+    return new Categoria(objDTO.id(), objDTO.nome());
   }
 
 }
