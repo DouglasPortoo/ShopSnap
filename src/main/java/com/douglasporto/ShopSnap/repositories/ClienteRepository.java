@@ -5,7 +5,13 @@ import org.springframework.stereotype.Repository;
 
 import com.douglasporto.ShopSnap.domain.Cliente;
 
+import org.springframework.transaction.annotation.Transactional;
+
+
+
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
   
+  @Transactional(readOnly = true)
+  Cliente findByEmail(String email);
 }
