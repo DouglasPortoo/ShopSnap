@@ -1,10 +1,12 @@
 package com.douglasporto.ShopSnap.domain;
 
 import com.douglasporto.ShopSnap.domain.enums.EstadoPagamento;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 import jakarta.persistence.Entity;
 
 @Entity
+@JsonTypeName("pagamentoComCartao")
 public class PagamentoComCartao extends Pagamento {
   
   private Integer numeroDeParcelas;
