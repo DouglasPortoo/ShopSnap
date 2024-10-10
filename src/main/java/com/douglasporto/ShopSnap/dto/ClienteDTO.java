@@ -3,11 +3,13 @@ package com.douglasporto.ShopSnap.dto;
 import java.io.Serializable;
 
 import com.douglasporto.ShopSnap.domain.Cliente;
+import com.douglasporto.ShopSnap.services.validadions.ClienteUpdate;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
+@ClienteUpdate
 public record ClienteDTO(Integer id,
     @NotEmpty(message = "preenchimento obrigatório") @Size(min = 5, max = 120, message = "Nome deve ter entre 5 e 120 caracteres") String nome,
     @NotEmpty(message = "preenchimento obrigatório") @Email(message = "Email invalido") String email)
