@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import com.douglasporto.ShopSnap.services.DBService;
+import com.douglasporto.ShopSnap.services.IEmailService;
+import com.douglasporto.ShopSnap.services.MockEmailService;
 
 @Configuration
 @Profile("test")
@@ -22,6 +24,11 @@ public class TestConfig {
     dbService.instantiateTestDatabase();
 
     return true;
+  }
+
+  @Bean
+  public IEmailService emailService() {
+    return new MockEmailService();
   }
 
 }

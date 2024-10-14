@@ -17,6 +17,7 @@ import com.douglasporto.ShopSnap.services.exceptions.ObjectNotFoundException;
 
 import jakarta.transaction.Transactional;
 
+
 @Service
 public class PedidoService {
 
@@ -37,6 +38,9 @@ public class PedidoService {
 
   @Autowired
 	private ClienteService clienteService;
+
+  @Autowired
+  private IEmailService emailService;
 
   public Pedido find(Integer id) {
     Optional<Pedido> obj = repo.findById(id);
@@ -66,7 +70,7 @@ public class PedidoService {
     }
 
     itemPedidoRepository.saveAll(obj.getItens());
-    System.out.println(obj);
+    emailService.sendOrderConfirmationEmail(obj);
     return obj;
   }
 }

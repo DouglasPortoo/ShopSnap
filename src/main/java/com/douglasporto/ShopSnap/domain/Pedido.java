@@ -8,8 +8,6 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
-import org.springframework.boot.autoconfigure.task.TaskExecutionProperties.Simple;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.CascadeType;
