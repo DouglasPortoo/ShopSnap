@@ -1,0 +1,221 @@
+[33mcommit c9f08affb69bd2c0ef92cfd6d3f12a602e0f1963[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 14 10:30:18 2024 -0300
+
+    MockEmailService com Logger. Padroes Strategy e Template Method
+
+[33mcommit 9cb4a388a707f84634cbcfe47865ad0014b624ab[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 14 10:05:10 2024 -0300
+
+    Implementando toString de Pedido
+
+[33mcommit 781e212d94236ad8aa19d09a48668f72aa87adbb[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Fri Oct 11 09:15:46 2024 -0300
+
+    Criando profile de teste
+
+[33mcommit 3525e7a1cd736de3ebd3d3a97aa0b8a51e06e5c2[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Thu Oct 10 15:42:20 2024 -0300
+
+    Inserindo Pedido
+
+[33mcommit 8a224a0bd40deff5a66f5b12fd91f0fd74d3c53e[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Thu Oct 10 14:48:17 2024 -0300
+
+    Subtotal e total do Pedido
+
+[33mcommit 11be5b9ddd79a08d804952fd07cc129849b99533[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Thu Oct 10 14:41:01 2024 -0300
+
+    Busca de pedidos por nome e categorias
+
+[33mcommit 2da482732b1c948625b26909323cb1cce152ce0a[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Thu Oct 10 10:26:06 2024 -0300
+
+    Validação customizada: email não repetido na atualização de Cliente
+
+[33mcommit 78560da1cd8ade3f46e4999d9592d97923d58fb7[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Thu Oct 10 10:09:03 2024 -0300
+
+    Validação customizada: email não repetido na inserção de Cliente
+
+[33mcommit 15b11639b11248b1179493afac667856bbbc0445[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Thu Oct 10 09:51:38 2024 -0300
+
+    Validação customizada: CPF ou CNPJ na inserção de Cliente
+
+[33mcommit ea8f4ecb43f17841104b4b3f67ff5370d34d6d41[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 16:10:03 2024 -0300
+
+    Ajustando e testando a deleção de Cliente
+
+[33mcommit 25baf2753a4c9c6060747a8b08c5e110a41d781d[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 16:03:05 2024 -0300
+
+     Inserindo um novo Cliente com POST
+
+[33mcommit 05f84ba6951b0b67ca74108b8c05501bfc683833[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 15:28:54 2024 -0300
+
+    Correções: update em CategoriaService e construtor de Pagamento
+
+[33mcommit 691a832a463df2b200429e45369c8ffdb7081243[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 15:22:32 2024 -0300
+
+    Refatorar método de atualização de categoria para utilizar DTO
+
+[33mcommit 713f158b752f75fe43e6571f145c5a4d4dc107d7[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 15:18:42 2024 -0300
+
+    PUT, DELETE e GET para Cliente
+
+[33mcommit a81cc12f7ccde092cb08ad3ce2d40a55cfb73eb5[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 14:23:05 2024 -0300
+
+    Personalizando o retorno da validação
+
+[33mcommit 92cf9b967d3bec823e12ea988d4f547dd7e5eede[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 13:53:03 2024 -0300
+
+    Validação sintática com Bean Validation
+
+[33mcommit 292c5377ce69a3dee3b255ffcfa0b935140177d0[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 11:09:46 2024 -0300
+
+    Paginação com parâmetros opcionais na requisição
+
+[33mcommit 8b220a6667b42db156b30c1315a0cddac8a58e40[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 10:35:07 2024 -0300
+
+    Listando todas categorias com DTO
+
+[33mcommit 03f741d1a8ebe0c74e1e64d49918a9dfe378a1dd[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 10:13:59 2024 -0300
+
+    Deletando uma Categoria com DELETE
+
+[33mcommit aa16749df7f0a2ac48df9846e97c2483e4d12c7d[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 09:44:36 2024 -0300
+
+    Atualizando Categoria com PUT, outros pequenos ajustes
+
+[33mcommit e9c541fdbb9179beaf609f2d01915504e5d3097b[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Wed Oct 9 09:29:28 2024 -0300
+
+    Inserindo uma nova Categoria com POST
+
+[33mcommit 1f9298acfb313b6b4c7fd6e9d03d31566f28ce0a[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Tue Oct 8 16:35:13 2024 -0300
+
+    Refatorar anotações Jackson em classes de domínio -Atualizacao: utilizando somente JsonIgnore
+
+[33mcommit 32a6346ef5fe71c8ceb30bfcbcde30af902853e2[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Tue Oct 8 16:28:53 2024 -0300
+
+    Endpoint /pedidos/{id} disponibilizado
+
+[33mcommit 916f7ea0ab5c2751fbfdad4921864c98282e408f[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Tue Oct 8 16:11:20 2024 -0300
+
+    ItemPedido e ItemPedidoPK
+
+[33mcommit 84cda30498ee99705092fb26ba2acd216282abf9[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Tue Oct 8 15:20:15 2024 -0300
+
+    Pedido, EstadoPagamento e Pagamento
+
+[33mcommit 15c4941af4347fccff5fbc2b09c4ca5604d7e2de[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Tue Oct 8 11:40:36 2024 -0300
+
+    Add Jackson annotations for JSON serialization in domain classes
+
+[33mcommit 75ee123d88f5ab3ca46f667177b8236517b176e5[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Tue Oct 8 11:24:22 2024 -0300
+
+    Add instantiation operation for Cliente and Endereco entities
+
+[33mcommit 5a9cb85480ff097eead5b2783c6986bfb12395e0[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Tue Oct 8 10:18:35 2024 -0300
+
+    Add instantiation operation for Estado and Cidade entities
+
+[33mcommit a054168d972dd4fdb4ddc08ddaeedb5a37aa9aae[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Tue Oct 8 09:35:47 2024 -0300
+
+    Endpoint adjustments /categorias{id}
+
+[33mcommit 3fea8807b95a459782a4a9aa22f40f87efbced17[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 7 16:21:21 2024 -0300
+
+    Product and many-to-many association
+
+[33mcommit 786b75a7af785aa216a63a84c291a01367015403[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 7 15:17:42 2024 -0300
+
+    Add README.md with project overview, features, technologies used, technical functionalities, and system requirements.
+
+[33mcommit 9e3a44114abdc3506519f2a16c3c003ee91c5af5[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 7 15:12:06 2024 -0300
+
+    Creating instantiation operation
+
+[33mcommit 46e7406a221f78b0753f19f67be847e2cc1f9fb8[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 7 14:47:40 2024 -0300
+
+    Creating repository and service for Category
+
+[33mcommit 7603959397751ea0c550c12e9113055717f71a71[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 7 14:24:26 2024 -0300
+
+    H2 database and automatic database creation
+
+[33mcommit d0df5d15d000e4cabe58fe5743a39db8fe892a78[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 7 11:43:09 2024 -0300
+
+    Testing the first domain class - Category
+
+[33mcommit 2d57ea071841bd51b16a78d16b91e70d65ff12be[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 7 11:26:55 2024 -0300
+
+    Add CategoriaResource class with REST endpoint for testing
+
+[33mcommit 5f56e1d4c330025fbbe7f562fdad6aa532b66e02[m
+Author: Douglas Porto <portogdouglas@gmail.com>
+Date:   Mon Oct 7 11:04:16 2024 -0300
+
+    Add initial project files
