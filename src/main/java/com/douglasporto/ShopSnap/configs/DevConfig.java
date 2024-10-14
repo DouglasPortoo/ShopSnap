@@ -9,11 +9,12 @@ import org.springframework.context.annotation.Profile;
 
 import com.douglasporto.ShopSnap.services.DBService;
 import com.douglasporto.ShopSnap.services.IEmailService;
-import com.douglasporto.ShopSnap.services.MockEmailService;
+
+import com.douglasporto.ShopSnap.services.SmtpEmailService;
 
 @Configuration
-@Profile("test")
-public class TestConfig {
+@Profile("dev")
+public class DevConfig {
   
   @Autowired
   private DBService dbService;
@@ -28,8 +29,7 @@ public class TestConfig {
 
   @Bean
   public IEmailService emailService() {
-    return new MockEmailService();
+    return new SmtpEmailService();
   }
-
 
 }
