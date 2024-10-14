@@ -15,6 +15,8 @@ import com.douglasporto.ShopSnap.repositories.PagamentoRepository;
 import com.douglasporto.ShopSnap.repositories.PedidoRepository;
 import com.douglasporto.ShopSnap.services.exceptions.ObjectNotFoundException;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class PedidoService {
 
@@ -33,6 +35,9 @@ public class PedidoService {
   @Autowired
   private ItemPedidoRepository itemPedidoRepository;
 
+  @Autowired
+	private ClienteService clienteService;
+
   public Pedido find(Integer id) {
     Optional<Pedido> obj = repo.findById(id);
 
@@ -40,9 +45,11 @@ public class PedidoService {
         "Objeto não encontrado! Id: " + id + ", Tipo: " + Pedido.class.getName()));
   }
 
+  @Transactional
   public Pedido insert(Pedido obj) {
     obj.setId(null);
     obj.setInstante(new Date());
+    obj.setCliente(clienteService.find(obj.getCliente().getId()));
     obj.getPagamento().setEstado(EstadoPagamento.PENDENTE);
     obj.getPagamento().setPedido(obj);
     if (obj.getPagamento() instanceof PagamentoComBoleto) {
@@ -59,7 +66,7 @@ public class PedidoService {
     }
 
     itemPedidoRepository.saveAll(obj.getItens());
-
+    System.out.println(obj);
     return obj;
   }
 }
