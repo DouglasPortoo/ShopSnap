@@ -1,11 +1,11 @@
 package com.douglasporto.ShopSnap.domain;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.Collection;
 
 import com.douglasporto.ShopSnap.domain.enums.Perfil;
 import com.douglasporto.ShopSnap.domain.enums.TipoCliente;
@@ -21,10 +21,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 @Entity
-public class Cliente implements Serializable {
+public class Cliente implements UserDetails {
 
   private static final long serialVersionUID = 1L;
+
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -174,6 +179,21 @@ public class Cliente implements Serializable {
     } else if (!id.equals(other.id))
       return false;
     return true;
+  }
+
+  @Override
+  public Collection<? extends GrantedAuthority> getAuthorities() {
+    return List.of(new SimpleGrantedAuthority(getPerfis().toString()));
+  }
+
+  @Override
+  public String getUsername() {
+    return email;
+  }
+
+  @Override
+  public String getPassword() {
+    return senha;
   }
 
 }

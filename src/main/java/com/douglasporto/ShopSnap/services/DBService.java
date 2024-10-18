@@ -165,7 +165,7 @@ public class DBService {
     estadoRepository.saveAll(Arrays.asList(est1, est2));
     cidadeRepository.saveAll(Arrays.asList(c1, c2, c3));
 
-    clienteRepository.saveAll(Arrays.asList(cli1));
+    clienteRepository.saveAll(Arrays.asList(cli1, cli2));
     enderecoRepository.saveAll(Arrays.asList(e1, e2, e3));
 
     pedidoRepository.saveAll(Arrays.asList(ped1, ped2));
